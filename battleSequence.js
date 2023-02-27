@@ -1,11 +1,11 @@
-const battleBackgroundImage = new Image()
-battleBackgroundImage.src = './Images/battleBackground.png'
 const battleBackground = new Sprite({
     position: {
         x: 0,
         y: 0,
     },
-    image: battleBackgroundImage
+    image: {
+        src: './Images/battleBackground.png'
+    }
 })
 
 let draggle 
