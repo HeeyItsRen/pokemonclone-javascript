@@ -1,11 +1,11 @@
-const battleBackgroundImage = new Image()
-battleBackgroundImage.src = './Images/battlebackground.png'
 const battleBackground = new Sprite({
     position: {
         x: 0,
         y: 0,
     },
-    image: battleBackgroundImage
+    image: {
+        src: './Images/battleBackground.png'
+    }
 })
 
 let draggle 
@@ -98,7 +98,7 @@ function initBattle() {
 
             })
         })
-        button.addEventListener('mouseenter', () => {
+        button.addEventListener('mouseenter', (e) => {
             const selectedAttack = attacks[e.currentTarget.innerHTML]
             document.querySelector('#attackType').innerHTML = selectedAttack.type
             document.querySelector('#attackType').style.color = selectedAttack.color

@@ -43,12 +43,6 @@ battleZonesMap.forEach((row, i) => {
     })
 })
 
-const image = new Image()
-image.src = './Images/Pallet Town.png'
-
-const foregroundImage = new Image()
-foregroundImage.src = './Images/foreground.png'
-
 const playerDownImage = new Image()
 playerDownImage.src = './Images/playerDown.png'
 
@@ -84,7 +78,9 @@ const background = new Sprite({
         x: offset.x,
         y: offset.y,
     },
-    image: image
+    image: {
+        src: './Images/Pallet Town.png'
+    }
 })
 
 const foreground = new Sprite({ 
@@ -92,7 +88,9 @@ const foreground = new Sprite({
         x: offset.x,
         y: offset.y,
     },
-    image: foregroundImage
+    image: {
+        src: './Images/foreground.png'
+    }
 })
 
 const keys = {
